@@ -1,5 +1,5 @@
 {% set name = "podman-compose" %}
-{% set version = "0.1.5" %}
+{% set version = "0.1.8" %}
 
 package:
   name: {{ name }}
@@ -7,9 +7,9 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/podman-compose-{{ version }}.tar.gz
-    sha256: fb229362f188980ea3fbdee2a25d0a2dd6a0b886d925d5213e22e09f1062ebe9
+    sha256: 8e6b6686ba6bab43a3e74f23ac22ddff57b695dc6cfb1d672b9a2fbf51858eef
   # TODO: remove after merge/release of https://github.com/containers/podman-compose/pull/229
-  - url: https://raw.githubusercontent.com/containers/podman-compose/v{{ version }}/LICENSE
+  - url: https://raw.githubusercontent.com/containers/podman-compose/{{ version }}/LICENSE
     sha256: 8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643
 
 build:
