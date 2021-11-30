@@ -1,16 +1,12 @@
-{% set name = "podman-compose" %}
-{% set version = "0.1.8" %}
+{% set version = "0.1.9" %}
 
 package:
-  name: {{ name }}
+  name: podman-compose
   version: {{ version }}
 
 source:
-  - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/podman-compose-{{ version }}.tar.gz
-    sha256: 8e6b6686ba6bab43a3e74f23ac22ddff57b695dc6cfb1d672b9a2fbf51858eef
-  # TODO: remove after merge/release of https://github.com/containers/podman-compose/pull/229
-  - url: https://raw.githubusercontent.com/containers/podman-compose/{{ version }}/LICENSE
-    sha256: 8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643
+  url: https://pypi.io/packages/source/p/podman-compose/podman-compose-{{ version }}.tar.gz
+  sha256: 14c62efc92c9048eb377c7b692f555c7b988479829e02c16ff3904dcc095c640
 
 build:
   number: 0
@@ -32,7 +28,7 @@ test:
   imports:
     - podman_compose
   commands:
-    - python -m pip check
+    - pip check
     - podman-compose --help
   requires:
     - pip
