@@ -1,4 +1,4 @@
-{% set version = "0.1.9" %}
+{% set version = "1.0.2" %}
 
 package:
   name: podman-compose
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/podman-compose/podman-compose-{{ version }}.tar.gz
-  sha256: 14c62efc92c9048eb377c7b692f555c7b988479829e02c16ff3904dcc095c640
+  sha256: 457888687340f4aa745de62f2d4bc86c3b00a5614034c4e4a7dda4a6a1a5f097
 
 build:
   number: 0
@@ -19,9 +19,11 @@ requirements:
   host:
     - pip
     - python >=3.5
+    - python-dotenv
     - pyyaml
   run:
     - python >=3.5
+    - python-dotenv
     - pyyaml
 
 test:
@@ -36,7 +38,7 @@ test:
 about:
   home: https://github.com/containers/podman-compose
   summary: A script to run docker-compose.yml using podman
-  license: GPL-2.0-or-later
+  license: GPL-2.0-only
   license_file: LICENSE
 
 extra:
