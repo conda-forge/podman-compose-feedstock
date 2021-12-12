@@ -3,7 +3,7 @@ About podman-compose
 
 Home: https://github.com/containers/podman-compose
 
-Package license: GPL-2.0-or-later
+Package license: GPL-2.0-only
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/podman-compose-feedstock/blob/master/LICENSE.txt)
 
