@@ -19,9 +19,11 @@ requirements:
   host:
     - pip
     - python >=3.5
+    - python-dotenv
     - pyyaml
   run:
     - python >=3.5
+    - python-dotenv
     - pyyaml
 
 test:
@@ -36,7 +38,7 @@ test:
 about:
   home: https://github.com/containers/podman-compose
   summary: A script to run docker-compose.yml using podman
-  license: GPL-2.0-or-later
+  license: GPL-2.0-only
   license_file: LICENSE
 
 extra:
