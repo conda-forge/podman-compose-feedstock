@@ -1,4 +1,4 @@
-{% set version = "1.0.2" %}
+{% set version = "1.0.3" %}
 
 package:
   name: podman-compose
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/podman-compose/podman-compose-{{ version }}.tar.gz
-  sha256: 457888687340f4aa745de62f2d4bc86c3b00a5614034c4e4a7dda4a6a1a5f097
+  sha256: 9c9fe8249136e45257662272ade33760613e2d9ca6153269e1e970400ea14675
 
 build:
   number: 0
