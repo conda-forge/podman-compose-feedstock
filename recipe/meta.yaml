@@ -1,28 +1,26 @@
-{% set version = "1.0.6" %}
+{% set version = "1.1.0" %}
 
 package:
   name: podman-compose
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/p/podman-compose/podman-compose-{{ version }}.tar.gz
-  sha256: 2db235049fca50a5a4ffd511a917808c960dacb8defd5481dd8b36a77d4da2e5
+  url: https://pypi.io/packages/source/p/podman-compose/podman_compose-{{ version }}.tar.gz
+  sha256: 3cf28b83082119a19cae35b59c29422fd04480c4970f5940094a9116ed8b0a9d
 
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - podman-compose = podman_compose:main
 
 requirements:
   host:
     - pip
-    - python >=3.5
-    - python-dotenv
-    - pyyaml
+    - python >=3.7
   run:
-    - python >=3.5
+    - python >=3.7
     - python-dotenv
     - pyyaml
 
