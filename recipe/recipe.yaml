@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "1.5.0"
+  version: "1.6.0"
 
 package:
   name: podman-compose
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/podman-compose/podman_compose-${{ version }}.tar.gz
-  sha256: 5cc09362852711ce5d27648e41cb5fd058ea5a75acbcdec2f8d0b0c114a18e8e
+  sha256: c83fd9bcbaa635100d581ce52a7a4b712ee0d457481232aff392efe3ebc5a217
 
 build:
   number: 0
